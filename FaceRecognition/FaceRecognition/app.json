@@ -1,0 +1,41 @@
+{
+  "expo": {
+    "name": "FaceRecognition",
+    "slug": "facerecognition",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "automatic",
+    "scheme": "facerecognition",
+
+    "plugins": [
+      "expo-router",
+      "expo-camera",
+      "expo-media-library"
+    ],
+
+    "ios": {
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSCameraUsageDescription": "Esta aplicación necesita acceso a la cámara para tomar fotografías.",
+        "NSPhotoLibraryUsageDescription": "Esta aplicación necesita acceso a las fotografías para guardar imágenes localmente.",
+        "NSPhotoLibraryAddUsageDescription": "Esta aplicación necesita permiso para guardar fotografías en tu biblioteca."
+      }
+    },
+
+    "android": {
+      "permissions": [
+        "CAMERA",
+        "READ_MEDIA_IMAGES",
+        "READ_MEDIA_VIDEO"
+      ]
+    },
+
+    "web": {
+      "bundler": "metro"
+    },
+
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}
