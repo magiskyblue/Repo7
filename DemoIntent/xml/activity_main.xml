@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="32dp"
+    android:background="@color/colorBackground">
+
+    <!-- Título principal -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="DemoIntent App"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimary"
+        android:textAlignment="center"
+        android:layout_marginBottom="48dp"/>
+
+    <!-- Botón 1 -->
+    <Button
+        android:id="@+id/btnMensaje"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="Enviar Mensaje"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:background="@drawable/bg_boton_redondeado"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Botón 2 -->
+    <Button
+        android:id="@+id/btnCalculo"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="Enviar Número"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:background="@drawable/bg_boton_redondeado"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Botón 3 -->
+    <Button
+        android:id="@+id/btnPerfil"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="Enviar Perfil Completo"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:background="@drawable/bg_boton_redondeado"/>
+</LinearLayout>
