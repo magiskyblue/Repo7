@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- TableLayout: filas (TableRow) y columnas, ideal para formularios -->
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:stretchColumns="1">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="16dp"
+        android:text="Formulario de registro"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+    <TableRow>
+        <TextView
+            android:padding="8dp"
+            android:text="Nombre:" />
+        <EditText
+            android:id="@+id/etNombre"
+            android:hint="Tu nombre"
+            android:inputType="textPersonName" />
+    </TableRow>
+
+    <TableRow>
+        <TextView
+            android:padding="8dp"
+            android:text="Correo:" />
+        <EditText
+            android:id="@+id/etCorreo"
+            android:hint="correo@ejemplo.com"
+            android:inputType="textEmailAddress" />
+    </TableRow>
+
+    <TableRow>
+        <TextView
+            android:padding="8dp"
+            android:text="Teléfono:" />
+        <EditText
+            android:id="@+id/etTelefono"
+            android:hint="10 dígitos"
+            android:inputType="phone" />
+    </TableRow>
+
+    <TableRow>
+        <TextView
+            android:padding="8dp"
+            android:text="Contraseña:" />
+        <EditText
+            android:id="@+id/etPassword"
+            android:hint="Contraseña"
+            android:inputType="textPassword" />
+    </TableRow>
+
+    <TableRow android:layout_marginTop="16dp">
+        <Button
+            android:id="@+id/btnLimpiar"
+            android:text="Limpiar" />
+        <Button
+            android:id="@+id/btnEnviar"
+            android:text="Enviar" />
+    </TableRow>
+
+</TableLayout>

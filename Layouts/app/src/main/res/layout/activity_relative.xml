@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lt_bg"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            style="@style/LtTitulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="RelativeLayout" />
+
+        <TextView
+            style="@style/LtSubtitulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Cada vista se coloca respecto al padre o a otra vista." />
+
+        <!-- Ejemplo 1: alrededor de un elemento central -->
+        <TextView
+            style="@style/LtEtiqueta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="8dp"
+            android:text="ALREDEDOR DE UN ELEMENTO CENTRAL" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="280dp"
+            android:background="@drawable/bg_card"
+            android:padding="16dp">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnCentro"
+                style="@style/LtBoton"
+                android:layout_width="96dp"
+                android:layout_height="64dp"
+                android:layout_centerInParent="true"
+                android:layout_margin="4dp"
+                android:background="@drawable/btn_indigo"
+                android:text="Centro" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnArriba"
+                style="@style/LtBoton"
+                android:layout_width="96dp"
+                android:layout_height="48dp"
+                android:layout_above="@id/btnCentro"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="4dp"
+                android:background="@drawable/btn_sky"
+                android:text="Arriba" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnAbajo"
+                style="@style/LtBoton"
+                android:layout_width="96dp"
+                android:layout_height="48dp"
+                android:layout_below="@id/btnCentro"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="4dp"
+                android:background="@drawable/btn_sky"
+                android:text="Abajo" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnIzquierda"
+                style="@style/LtBoton"
+                android:layout_width="72dp"
+                android:layout_height="48dp"
+                android:layout_centerVertical="true"
+                android:layout_margin="4dp"
+                android:layout_toStartOf="@id/btnCentro"
+                android:background="@drawable/btn_emerald"
+                android:text="Izq." />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnDerecha"
+                style="@style/LtBoton"
+                android:layout_width="72dp"
+                android:layout_height="48dp"
+                android:layout_centerVertical="true"
+                android:layout_margin="4dp"
+                android:layout_toEndOf="@id/btnCentro"
+                android:background="@drawable/btn_emerald"
+                android:text="Der." />
+
+            <androidx.appcompat.widget.AppCompatButton
+                style="@style/LtBoton"
+                android:layout_width="88dp"
+                android:layout_height="40dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/btn_pink"
+                android:text="Esquina" />
+        </RelativeLayout>
+
+        <!-- Ejemplo 2: tarjeta de perfil -->
+        <TextView
+            style="@style/LtEtiqueta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="8dp"
+            android:text="EJEMPLO REAL: TARJETA DE PERFIL" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_card"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/avatar"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:layout_alignParentStart="true"
+                android:background="@drawable/btn_indigo"
+                android:gravity="center"
+                android:text="A"
+                android:textColor="@color/lt_white"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnSeguir"
+                style="@style/LtBoton"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/btn_indigo"
+                android:paddingStart="18dp"
+                android:paddingEnd="18dp"
+                android:text="Seguir" />
+
+            <TextView
+                android:id="@+id/nombre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/avatar"
+                android:layout_marginStart="14dp"
+                android:layout_toStartOf="@id/btnSeguir"
+                android:layout_toEndOf="@id/avatar"
+                android:text="Ana Pérez"
+                android:textColor="@color/lt_text"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                style="@style/LtSubtitulo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@id/nombre"
+                android:layout_below="@id/nombre"
+                android:layout_marginTop="2dp"
+                android:text="Estudiante de Android" />
+        </RelativeLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnVolver"
+            style="@style/LtBotonContorno"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginTop="24dp"
+            android:text="← Volver al menú" />
+
+    </LinearLayout>
+</ScrollView>

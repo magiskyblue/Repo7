@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Paleta (con prefijo lt_ para no chocar con tu colors.xml) -->
+    <color name="lt_bg">#F4F6FB</color>
+    <color name="lt_white">#FFFFFF</color>
+    <color name="lt_text">#1F2937</color>
+    <color name="lt_muted">#6B7280</color>
+    <color name="lt_stroke">#E5E7EB</color>
+    <color name="lt_indigo">#4F46E5</color>
+    <color name="lt_sky">#0EA5E9</color>
+    <color name="lt_emerald">#10B981</color>
+    <color name="lt_amber">#F59E0B</color>
+    <color name="lt_pink">#EC4899</color>
+
+    <!-- Estilos de texto -->
+    <style name="LtTitulo">
+        <item name="android:textSize">28sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/lt_text</item>
+    </style>
+
+    <style name="LtSubtitulo">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/lt_muted</item>
+    </style>
+
+    <style name="LtEtiqueta">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:letterSpacing">0.08</item>
+        <item name="android:textColor">@color/lt_muted</item>
+    </style>
+
+    <!-- Estilos de botón -->
+    <style name="LtBoton">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/lt_white</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:minHeight">0dp</item>
+        <item name="android:minWidth">0dp</item>
+    </style>
+
+    <style name="LtBotonContorno" parent="LtBoton">
+        <item name="android:textColor">@color/lt_indigo</item>
+        <item name="android:background">@drawable/btn_outline</item>
+    </style>
+
+</resources>

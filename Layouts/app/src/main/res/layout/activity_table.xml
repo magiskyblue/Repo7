@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lt_bg"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            style="@style/LtTitulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TableLayout" />
+
+        <TextView
+            style="@style/LtSubtitulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Organiza las vistas en filas y columnas. Ideal para formularios." />
+
+        <!-- Ejemplo 1: formulario -->
+        <TextView
+            style="@style/LtEtiqueta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="8dp"
+            android:text="FORMULARIO DE REGISTRO" />
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_card"
+            android:padding="16dp"
+            android:stretchColumns="1">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingEnd="12dp"
+                    android:text="Nombre"
+                    android:textColor="@color/lt_text"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/etNombre"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_input"
+                    android:hint="Tu nombre"
+                    android:inputType="textPersonName"
+                    android:padding="12dp"
+                    android:singleLine="true"
+                    android:textSize="15sp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingEnd="12dp"
+                    android:text="Correo"
+                    android:textColor="@color/lt_text"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/etCorreo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_input"
+                    android:hint="correo@ejemplo.com"
+                    android:inputType="textEmailAddress"
+                    android:padding="12dp"
+                    android:singleLine="true"
+                    android:textSize="15sp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingEnd="12dp"
+                    android:text="Teléfono"
+                    android:textColor="@color/lt_text"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/etTelefono"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_input"
+                    android:hint="10 dígitos"
+                    android:inputType="phone"
+                    android:padding="12dp"
+                    android:singleLine="true"
+                    android:textSize="15sp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingEnd="12dp"
+                    android:text="Contraseña"
+                    android:textColor="@color/lt_text"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/etPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_input"
+                    android:hint="Mínimo 6 caracteres"
+                    android:inputType="textPassword"
+                    android:padding="12dp"
+                    android:singleLine="true"
+                    android:textSize="15sp" />
+            </TableRow>
+
+            <!-- layout_span="2": esta celda ocupa las dos columnas -->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_span="2"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnLimpiar"
+                        style="@style/LtBotonContorno"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_marginEnd="12dp"
+                        android:layout_weight="1"
+                        android:text="Limpiar" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnEnviar"
+                        style="@style/LtBoton"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/btn_indigo"
+                        android:text="Enviar" />
+                </LinearLayout>
+            </TableRow>
+        </TableLayout>
+
+        <!-- Ejemplo 2: tabla de datos -->
+        <TextView
+            style="@style/LtEtiqueta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="8dp"
+            android:text="TABLA DE DATOS" />
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_card"
+            android:padding="12dp"
+            android:stretchColumns="0">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_indigo">
+
+                <TextView
+                    android:padding="10dp"
+                    android:text="Producto"
+                    android:textColor="@color/lt_white"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:gravity="end"
+                    android:padding="10dp"
+                    android:text="Cant."
+                    android:textColor="@color/lt_white"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:gravity="end"
+                    android:padding="10dp"
+                    android:text="Importe"
+                    android:textColor="@color/lt_white"
+                    android:textStyle="bold" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:padding="10dp"
+                    android:text="Libreta"
+                    android:textColor="@color/lt_text" />
+
+                <TextView
+                    android:gravity="end"
+                    android:padding="10dp"
+                    android:text="2"
+                    android:textColor="@color/lt_text" />
+
+                <TextView
+                    android:gravity="end"
+                    android:padding="10dp"
+                    android:text="$80"
+                    android:textColor="@color/lt_text" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#F9FAFB">
+
+                <TextView
+                    android:padding="10dp"
+                    android:text="Pluma"
+                    android:textColor="@color/lt_text" />
+
+                <TextView
+                    android:gravity="end"
+                    android:padding="10dp"
+                    android:text="5"
+                    android:textColor="@color/lt_text" />
+
+                <TextView
+                    android:gravity="end"
+                    android:padding="10dp"
+                    android:text="$25"
+                    android:textColor="@color/lt_text" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:padding="10dp"
+                    android:text="Mochila"
+                    android:textColor="@color/lt_text" />
+
+                <TextView
+                    android:gravity="end"
+                    android:padding="10dp"
+                    android:text="1"
+                    android:textColor="@color/lt_text" />
+
+                <TextView
+                    android:gravity="end"
+                    android:padding="10dp"
+                    android:text="$450"
+                    android:textColor="@color/lt_text" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_span="2"
+                    android:padding="10dp"
+                    android:text="Total"
+                    android:textColor="@color/lt_text"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:gravity="end"
+                    android:padding="10dp"
+                    android:text="$555"
+                    android:textColor="@color/lt_indigo"
+                    android:textStyle="bold" />
+            </TableRow>
+        </TableLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnVolver"
+            style="@style/LtBotonContorno"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginTop="24dp"
+            android:text="← Volver al menú" />
+
+    </LinearLayout>
+</ScrollView>
